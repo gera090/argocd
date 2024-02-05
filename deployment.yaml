@@ -4,7 +4,7 @@ metadata:
   name: mario-app-argocd
   namespace: mario-argocd
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mario-app-argocd
