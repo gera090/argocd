@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mario-app-argocd
+  namespace: mario-argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mario-app-argocd
+  template:
+    metadata:
+      labels:
+        app: mario-app-argocd
+    spec:
+      containers:
+      - name: mario-container-argocd
+        image: kaminskypavel/mario:latest
+        ports:             
+        - containerPort: 8080
+          name: mario-port-argocd
+          
