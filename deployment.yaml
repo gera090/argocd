@@ -18,5 +18,4 @@ spec:
         image: kaminskypavel/mario:latest
         ports:             
         - containerPort: 8080
-          name: mario-port-argocd
           
