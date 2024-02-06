@@ -20,10 +20,12 @@ spec:
         - containerPort: 8080
         env: 
         - name: NEXTGISWEB__CORE__DATABASE__HOST
-          value: postgres
+          value: 10.42.0.95
         - name: NEXTGISWEB__CORE__DATABASE__NAME
           value: nextgisweb
-        - name: NNEXTGISWEB__CORE__DATABASE__PORT
+        - name: NEXTGISWEB__CORE__DATABASE__PORT
           value: "5432"
+        - name: NEXTGISWEB__CORE__DATABASE__PASSWORD
+          value: Eml6P79McsbCzzye
 
           
