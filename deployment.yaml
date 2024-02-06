@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mario-app-argocd
-  namespace: mario-argocd
+  name: ngw
+  namespace: nextgis
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: mario-app-argocd
+      app: ngw-app
   template:
     metadata:
       labels:
-        app: mario-app-argocd
+        app: ngw-app
     spec:
       containers:
-      - name: mario-container-argocd
-        image: kaminskypavel/mario:latest
+      - name: ngw-app-container
+        image: registry.gitlab.com/nextgis/ngwdocker/ext-wl:2.4.1
         ports:             
         - containerPort: 8080
           

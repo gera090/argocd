@@ -12,4 +12,3 @@ spec:
       port: 8088
       targetPort: 8080
       nodePort: 30078
-
