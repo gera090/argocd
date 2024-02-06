@@ -24,6 +24,6 @@ spec:
         - name: NEXTGISWEB__CORE__DATABASE__NAME
           value: nextgisweb
         - name: NNEXTGISWEB__CORE__DATABASE__PORT
-          value: 5432
+          value: "5432"
 
           
