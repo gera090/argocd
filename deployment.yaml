@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ngw
+  name: ngw-app
   namespace: nextgis
 spec:
   replicas: 1
@@ -20,4 +20,4 @@ spec:
         - containerPort: 8080
         env:
         - name: NEXTGISWEB__CORE__DATABASE__PASSWORD
-          value: "PasswordDif123)"
+          value: PasswordDif123)
