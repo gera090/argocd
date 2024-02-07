@@ -21,11 +21,4 @@ spec:
         env: 
         - name: NEXTGISWEB__CORE__DATABASE__HOST
           value: postgres-app-svc
-        - name: NEXTGISWEB__CORE__DATABASE__NAME
-          value: nextgisweb
-        - name: NEXTGISWEB__CORE__DATABASE__PORT
-          value: "5432"
-        - name: NEXTGISWEB__CORE__DATABASE__PASSWORD
-          value: Eml6P79McsbCzzye
-
           
