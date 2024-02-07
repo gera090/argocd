@@ -20,7 +20,7 @@ spec:
         - containerPort: 8080
         env: 
         - name: NEXTGISWEB__CORE__DATABASE__HOST
-          value: 10.42.0.95
+          value: postgres-app-svc
         - name: NEXTGISWEB__CORE__DATABASE__NAME
           value: nextgisweb
         - name: NEXTGISWEB__CORE__DATABASE__PORT

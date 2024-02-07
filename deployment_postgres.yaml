@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres
+  name: postgres-app
   namespace: nextgis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: postgres
+      app: postgres-app
   template:
     metadata:
       labels:
-        app: postgres
+        app: postgres-app
     spec:
       containers:
-      - name: postgres-container
+      - name: postgres-app-container
         image: registry.gitlab.com/nextgis/ngwdocker/ext-wl/postgres:2.4.1
         ports:             
         - containerPort: 5432
