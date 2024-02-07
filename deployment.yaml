@@ -20,4 +20,4 @@ spec:
         - containerPort: 8080
         env:
         - name: NEXTGISWEB__CORE__DATABASE__PASSWORD
-          value: PasswordDif123)
+          value: "PasswordDif123)"
