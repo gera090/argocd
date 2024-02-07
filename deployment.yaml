@@ -18,7 +18,4 @@ spec:
         image: registry.gitlab.com/nextgis/ngwdocker/ext-wl/app:2.4.1
         ports:             
         - containerPort: 8080
-        env: 
-        - name: NEXTGISWEB__CORE__DATABASE__HOST
-          value: postgres-app-svc
           
