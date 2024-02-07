@@ -18,6 +18,11 @@ spec:
         image: registry.gitlab.com/nextgis/ngwdocker/ext-wl/postgres:2.4.1
         ports:             
         - containerPort: 5432
-        env:
-        - name: POSTGRES_PASSWORD
-          value: "PasswordDif123)" 
+        volumeMounts:
+          - mountPath: "/opt/ngw/secret"
+            name: postgres-secret
+            readOnly: true
+      volumes:
+        - name: postgres-secret
+          secret:
+            secretName: postgres-secret
