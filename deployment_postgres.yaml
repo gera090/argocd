@@ -28,7 +28,7 @@ spec:
         - name: postgres-secret
           secret:
             secretName: postgres-secret
-       - name: pvc-postgres
+        - name: pvc-postgres
           persistentVolumeClaim:
             claimName: pvc-postgres
 
