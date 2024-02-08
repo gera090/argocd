@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ingress-service
-  namespace: ingress-nginx
+  namespace: nextgis
 spec:
   type: NodePort
   selector:
