@@ -24,13 +24,6 @@ spec:
             readOnly: true
           - mountPath: /opt/ngw/data/postgres
             name: pvc-postgres
-      volumes:
-        - name: postgres-secret
-          secret:
-            secretName: postgres-secret
-        - name: pvc-postgres
-          persistentVolumeClaim:
-            claimName: pvc-postgres
       initContainers:
       - args:
         - chown -R 1000:1000 /opt/ngw/data/postgres
@@ -44,4 +37,10 @@ spec:
         volumeMounts:
         - mountPath: /opt/ngw/data/postgres
           name: pvc-postgres
-
+      volumes:
+        - name: postgres-secret
+          secret:
+            secretName: postgres-secret
+        - name: pvc-postgres
+          persistentVolumeClaim:
+            claimName: pvc-postgres
