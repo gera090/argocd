@@ -22,7 +22,13 @@ spec:
           - mountPath: "/opt/ngw/secret"
             name: postgres-secret
             readOnly: true
+          - mountPath: /opt/ngw/data/postgres
+            name: pvc-postgres
       volumes:
         - name: postgres-secret
           secret:
             secretName: postgres-secret
+       - name: pvc-postgres
+          persistentVolumeClaim:
+            claimName: pvc-postgres
+
