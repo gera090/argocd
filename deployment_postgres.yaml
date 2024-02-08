@@ -31,4 +31,17 @@ spec:
         - name: pvc-postgres
           persistentVolumeClaim:
             claimName: pvc-postgres
+      initContainers:
+      - args:
+        - chown -R 1000:1000 /opt/ngw/data/postgres
+        command:
+        - sh
+        - -c
+        image: busybox:latest
+        imagePullPolicy: Always
+        securityContext:
+          runAsUser: 0
+        volumeMounts:
+        - mountPath: /opt/ngw/data/postgres
+          name: pvc-postgres
 
