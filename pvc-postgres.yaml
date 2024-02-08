@@ -10,5 +10,5 @@ spec:
     requests:
       storage: 2Gi
   volumeName: postgres-storage
-  storageClassName: gera-storage
+  storageClassName: local-storage 
   
