@@ -9,6 +9,5 @@ spec:
   resources:
     requests:
       storage: 2Gi
-  volumeName: postgres-storage
-  storageClassName: local-storage 
+  storageClassName: postgres-storage
   
