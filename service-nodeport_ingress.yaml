@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    name: ingress-ngw-app
+    app.kubernetes.io/component: controller
   ports:
     - name: http
       port: 80
