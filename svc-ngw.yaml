@@ -4,9 +4,11 @@ metadata:
   namespace: nextgis
   name: app-svc
 spec:
+  type: NodePort
   selector: 
     app: ngw-app
   ports:
     - protocol: TCP
+      nodePort: 32010
       port: 8080
       targetPort: 8080
