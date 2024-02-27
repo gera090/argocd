@@ -4,7 +4,7 @@ metadata:
   name: ngw-app
   namespace: nextgis
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: ngw-app
