@@ -22,7 +22,26 @@ spec:
           - mountPath: "/opt/ngw/secret"
             name: postgres-secret
             readOnly: true
+          - mountPath: /opt/ngw/data/app
+            name: pvc-ngw
+      initContainers:
+      - args:
+        - chown -R 1000:1000 /opt/ngw/data/app
+        command:
+        - sh
+        - -c
+        name: initcontngw
+        image: busybox:latest
+        imagePullPolicy: Always
+        securityContext:
+          runAsUser: 0
+        volumeMounts:
+        - mountPath: /opt/ngw/data/app
+          name: pvc-ngw
       volumes:
         - name: postgres-secret
           secret:
             secretName: postgres-secret
+        - name: pvc-ngw
+          persistentVolumeClaim:
+            claimName: pvc-ngw
