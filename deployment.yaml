@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ngw-app-container
-        image: harbor.nextgis.net/gazprom/ngw/app:0.16.2
+        image: harbor.nextgis.net/gazprom/ngw/app:latest
         ports:             
         - containerPort: 8080
         volumeMounts:
