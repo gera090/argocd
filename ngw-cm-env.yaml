@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ngw-cm-env
+  namespace: nextgis
+data:
+  UWSGI_LOGGING: "all"
+  NEXTGISWEB__ENVIRONMENT__LOGGING__LEVEL: "DEBUG"

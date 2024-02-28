@@ -18,6 +18,9 @@ spec:
         image: harbor.nextgis.net/gazprom/ngw/app:latest
         ports:             
         - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: ngw-cm-env
         volumeMounts:
           - mountPath: "/opt/ngw/secret"
             name: postgres-secret
