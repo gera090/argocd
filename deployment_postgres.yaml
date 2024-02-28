@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: postgres-app-container
-        image: registry.gitlab.com/nextgis/ngwdocker/ext-wl/postgres:2.4.1
+        image: harbor.nextgis.net/gazprom/ngw/postgres:0.16.2
         ports:             
         - containerPort: 5432
         volumeMounts:

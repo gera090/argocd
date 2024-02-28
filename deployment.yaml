@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ngw-app-container
-        image: registry.gitlab.com/nextgis/ngwdocker/ext-wl/app:2.4.1
+        image: harbor.nextgis.net/gazprom/ngw/app:0.16.2
         ports:             
         - containerPort: 8080
         volumeMounts:
