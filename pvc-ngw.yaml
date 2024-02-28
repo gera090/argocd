@@ -5,9 +5,9 @@ metadata:
   namespace: nextgis
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 2Gi
-  storageClassName: ngw-gera-storage
+  storageClassName: ngw-gera-storage 
   
