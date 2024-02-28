@@ -22,6 +22,8 @@ spec:
           - mountPath: "/opt/ngw/secret"
             name: postgres-secret
             readOnly: true
+      imagePullSecrets:
+      - name: harbor
       volumes:
         - name: postgres-secret
           secret:
