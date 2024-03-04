@@ -16,6 +16,7 @@ spec:
       containers:
       - name: ngw-app-container
         image: harbor.nextgis.net/gazprom/ngw/app:latest
+        imagePullPolicy: Always
         ports:             
         - containerPort: 8080
         envFrom:
